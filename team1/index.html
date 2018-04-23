@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	  
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" crossorigin="anonymous">
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>	
+	<link rel="stylesheet" href="../bootstraptheme.css">
+	
+	<link href="styles.css" rel="stylesheet"> 
+	<title> </title>
+</head>
+
+<body>
+	<div id="preview">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+	  <a class="navbar-brand" href="#">Health & Wellness Services</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	  </button>
+
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+		  <li class="nav-item">
+			<a class="nav-link" href="team1/index.html">Contact Us/Ask a Question</a>
+					</li><li class="nav-item">
+			<a class="nav-link" href="team3/index.html">Family Planning</a>
+			</li><li class="nav-item">
+			<a class="nav-link" href="#nutr">Women's Nutrition</a>
+			</li><li class="nav-item">
+			<a class= "nav-link" href = "#std"> STIs & HIV</a>
+			</li><li class="nav-item">
+			<a class = "nav-link" href = "team2/FAQ.html"> FAQ </a>
+		  </li>
+		</ul>
+		<!-- <form class="form-inline my-2 my-lg-0">
+		  <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+		  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+		</form>  !-->
+	  </div>
+	</nav><br>
+	<div class="container text-center">
+		
+		<br>
+		<h1>Contact Us</h1>
+		
+	</div>
+	</div>
+	
+	<div class= "container">
+	<form>
+	  <br>
+	 
+	  <div class="form-group row">
+		<label for="example-text-input" class="col-2 col-form-label">Subject</label>
+		<div class="col-10">
+		<input class="form-control" type="text" id="example-text-input">
+		</div>
+		</div>
+	  
+	  <div class="form-group">
+		<label for="exampleTextarea">Ask us your question!</label>
+		<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+	  </div>
+	  <div class="form-check">
+		<label class="form-check-label">
+		  <input type="checkbox" id="checkbox" class="form-check-input">
+		  Anonymous? - if you click this option you do not have to provide your email.
+		  <br>
+		  <br>
+		</label>
+	  </div>
+	  
+	  <div id = ifannon>
+	  Our response to this question will be available on our blog within a couple of days.
+	  	  <br>
+	  </div>
+	  
+	  <div id = "info">
+	  
+	  <div>
+	  
+	  We will email you back as soon as possible if you provide your email below.
+	  <br>
+	  <br>
+	  
+	  </div>
+	  
+	  <div class="form-group row">
+		<label for="example-text-input" class="col-2 col-form-label">Name</label>
+		<div class="col-10">
+		<input class="form-control" type="text" id="example-text-input">
+		</div>
+		</div>
+	  
+	  <div class="form-group">
+		<label for="exampleInputEmail1">Email address</label>
+		<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+		<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+	  </div>
+	  
+	  <div class="form-group row">
+		<label for="example-text-input" class="col-2 col-form-label">EMPLID</label>
+		<div class="col-10">
+		<input class="form-control" type="text" id="example-text-input">
+		</div>
+		</div>
+	 </div>
+	 <br>
+	  <button type="button" id = "submitbutton" class="btn btn-primary">Submit</button>
+	  <br>
+	  <br>
+	  
+	  <div class="card">
+  <div class="card-body">
+    <h4 class="card-title">Contact Information:</h4>
+    <h6 class="card-subtitle mb-2 text-muted">Health Center</h6>
+    <p class="card-text">
+	Building 1C, Room 112 <br>
+	Phone : 718.982.3045 <br>
+	TTY: 718.982.3315 <br>
+	Fax : 718.982.2966 <br>
+    </p>
+    <h6 class="card-subtitle mb-2 text-muted">Wellness Drop-In Center</h6>
+    <p class="card-text">
+	1C, Room 111 <br>
+	Phone : 718.982.3113 <br>
+    </p>
+  </div>
+</div>
+	  
+	  	  <br>
+	  <br>
+	  
+</form>
+</div>
+	
+	<script type="text/javascript">
+	$(document).ready(function(){
+		 
+		 $('#ifannon').hide();
+		 
+	$('#checkbox').click(function(){
+	
+    if (this.checked) {
+		$("#info").fadeOut(50);
+		$("#ifannon").fadeIn(50);
+		
+    }
+	
+	else{
+		$( "#info" ).fadeIn(50);
+		$("#ifannon").fadeOut(50);
+	}
+		  
+		});
+		
+	$('#submitbutton').click(function() {
+	
+	if ( $( '#checkbox' ).prop( "checked" ) )
+
+		window.location = "submitpg1.html";
+	
+	else
+	
+		window.location = "submitpg2.html";
+	
+	});
+		
+		});
+		
+	</script>
+	
+	
+	
+</body> 
+</html>
